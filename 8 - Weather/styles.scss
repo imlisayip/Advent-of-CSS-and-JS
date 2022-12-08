@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald&display=swap")
+no-repeat;
+
+body {
+  align-items: center;
+  background-color: #e9f5fa;
+  display: flex;
+  font-family: "Krona One", sans-serif;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+
+  & > svg {
+    position: absolute;
+  }
+}
+
+.wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.day {
+  color: #4db0d3;
+  text-align: center;
+  width: 200px;
+}
+
+.day-of-week {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.date {
+  font-size: 4.5rem;
+}
+
+.day-of-week,
+.date {
+  color: #4db0d3;
+  font-family: "Krona One", sans-serif;
+}
+
+.bar {
+  background: var(--background);
+  border-radius: 65px;
+  box-sizing: border-box;
+  min-height: 550px;
+  padding-top: 230px;
+  position: relative;
+  width: 165px;
+
+  box-shadow: 0px 5.26953px 5.26953px rgba(0, 0, 0, 0.25),
+    14.4912px 5.26953px 44.791px rgba(32, 77, 92, 0.7);
+}
+
+.temperature {
+  color: var(--temperature);
+  font-family: "Oswald", sans-serif;
+  font-size: 6rem;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.content {
+  color: var(--content);
+  fill: currentColor;
+}
+
+.degrees {
+  font-size: 3rem;
+  position: absolute;
+  top: 20px;
+}
+
+.perceptation,
+.low {
+  font-size: 1.5rem;
+}
+
+.icon {
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  top: 10px;
+  width: 32px;
+
+  .low & {
+    left: -5px;
+    margin-right: -5px;
+    position: relative;
+  }
+  .perceptation & {
+    margin-bottom: 5px;
+  }
+}
+
+.weather svg {
+  position: absolute;
+
+  .cloudy & {
+    left: -25px;
+    top: 75px;
+  }
+  .sunny & {
+    left: -20px;
+    top: 20px;
+  }
+  .stormy & {
+    left: -23px;
+    top: 35px;
+  }
+  .snowy & {
+    left: -25px;
+    top: 30px;
+  }
+  .partly-cloudy & {
+    left: -15px;
+    top: 20px;
+  }
+  .rainy & {
+    left: 30px;
+    top: -15;
+  }
+}
+
+.cloudy {
+  --background: #4db0d3;
+  --content: #d3ebf4;
+  --temperature: #e6df95;
+}
+
+.sunny {
+  --background: #e6df95;
+  --content: #247490;
+  --temperature: #4db0d3;
+}
+.stormy {
+  --background: #0e2e3a;
+  --content: #d3ebf4;
+  --temperature: #e6df95;
+}
+.snowy {
+  --background: #bce1ef;
+  --content: #247490;
+  --temperature: #0e2e3a;
+}
+.rainy {
+  --background: #4db0d3;
+  --content: #d3ebf4;
+  --temperature: #e6df95;
+}
+.partly-cloudy {
+  --background: #2b8bad;
+  --content: #d3ebf4;
+  --temperature: #e6df95;
+}
