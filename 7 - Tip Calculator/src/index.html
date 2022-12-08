@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.scss">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="tip-amount">
+            <div class="label">Tip Amount</div>
+            <div class="dollars"><sup>$</sup>4.02</div>
+        </div>
+        <div class="total-per-person">
+            <div class="label">Tip Per Person</div>
+            <div class="dollars"><sup>$</sup>12.02</div>
+        </div>
+        <div class="input-fields">    
+            <div class="total">
+                <div class="bill-amount">
+                    <div class="field">
+                        <input type="text" name="bill-amount"  value="102.02" maxlength="6">
+                    </div>
+                    <div class="label">Bill Amount</div>
+                </div>
+                <div class="number-of-people">
+                    <div class="field">
+                        <input type="text" name="number-of-people"value="3" maxlength="2">
+                    </div>                        
+                    <div class="label">Number of People</div>
+                </div>
+            </div>
+            <div class="tip-percentages">
+                <div>
+                    <input type="radio" name="tip" value="5%" id="five-percent">
+                    <label for="five-percent">5%</label>
+                </div>
+                <div>
+                    <input type="radio" name="tip" value="10%" id="ten-percent">
+                    <label for="ten-percent">10%</label>
+                </div>
+                <div>
+                    <input type="radio" name="tip" value="15%" id="fifteen-percent">
+                    <label for="fifteen-percent">15%</label>
+                </div>
+                <div>
+                    <input type="radio" name="tip" value="20%" id="twenty-percent" checked>
+                    <label for="twenty-percent">20%</label>
+                </div>
+            </div>
+            <div class="calculate">
+                <button>Calculate</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
