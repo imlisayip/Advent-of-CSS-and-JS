@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+
+  & a:hover .ring {
+    animation-name: beacon;
+    animation-iteration-count: infinite;
+    animation-duration: 1x;
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes beacon {
+  0% {
+    r: 22px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    r: 50px;
+    opacity: 0;
+  }
+}
+
+.overlay {
+  backdrop-filter: blur(45px);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background-color: white;
+  width: 60%;
+  display: flex;
+  box-shadow: 0px 0px 146.667px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  padding: 75px 90px;
+  gap: 100px;
+  position: relative;
+}
+
+.product-image,
+.content {
+  flex: 1;
+}
+
+.close {
+  // max-width: 25px;
+  // max-height: 25px;
+  top: 25px;
+  right: 25px;
+  transform: rotate(135);
+  opacity: 0.3;
+  border: none;
+  background: none;
+  position: absolute;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.content {
+  max-width: 600px;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: -0.5;
+  padding: 0;
+  margin: 0 0 50px 0;
+  color: #f40082;
+  line-height: 154.67px;
+}
+
+.description {
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 36px;
+}
+
+.buy-now {
+  font-weight: 900;
+  background-color: #ffd200;
+  border: 0;
+  color: black;
+  padding: 20px 50px;
+  border-radius: 100;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #3452a5;
+    color: #ffd200;
+  }
+}
+
+.light {
+  max-width: 725px;
+}
