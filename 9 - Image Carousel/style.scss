@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2family=Roboto+Mono&display=swap");
+
+body {
+  display: flex;
+  font-family: "Roboto Mono", monospace;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.feature {
+  padding-bottom: 200px; // offset thumbnail strip
+  & img {
+    max-height: 615px;
+    max-width: 800px;
+  }
+}
+.caption {
+  font-size: 14px;
+  text-align: center;
+}
+
+.thumbnails {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: both mandatory;
+  scroll-padding: 0 100px;
+
+  & ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+    padding: 0 100px;
+  }
+
+  & li:last-child img {
+    margin-right: 100px;
+  }
+
+  & li {
+    scroll-snap-align: start;
+    scroll-snap-type: normal;
+  }
+  & img {
+    height: 175px;
+    width: 175px;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+
+  .selected {
+    outline: 10px solid #ff00c7;
+    outline-offset: -10px;
+  }
+}
+
+.left,
+.right {
+  position: absolute;
+  background: rgba(255, 0, 199, 0.3);
+  width: 100px;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 200px;
+  box-sizing: border-box;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+  & img {
+    transform: rotate(180);
+  }
+}
